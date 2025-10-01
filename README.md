@@ -32,3 +32,26 @@ DESCRIPTION : ce programme utilise des fonctions pour
   pour n éléments
   - spatiale : o(n)
   - temporelle :o(n²)
+ 
+
+3. INSERTION D'UN ELEMENT DANS UNE LISTE DOUBLEMENT CHAINE TRIE
+
+    Ce programme en C gère une liste doublement chaînée triée. Il permet à l'utilisateur d'insérer des éléments dans la liste tout en maintenant l'ordre croissant.
+ Fonctionnement :
+Structures de données :
+
+    Le programme définit deux structures : Cellule, qui représente un élément de la liste (avec des pointeurs vers la cellule suivante et précédente), et Liste, qui contient un pointeur vers la tête de la liste.
+Création de cellules :
+     La fonction CreationCellule alloue de la mémoire pour une nouvelle cellule et l'initialise avec une valeur donnée, en fixant ses pointeurs à NULL.
+Insertion triée :
+      La fonction InsererTrie prend un nombre entier et l'insère dans la liste de manière à ce que la liste reste triée. Elle gère plusieurs cas :
+Si la liste est vide, la nouvelle cellule devient la tête.
+Si la valeur à insérer est inférieure à celle de la tête, la nouvelle cellule devient la nouvelle tête.
+Dans les autres cas, elle parcourt la liste pour trouver la bonne position d'insertion entre deux cellules ou à la fin de la liste.
+Affichage de la liste :
+      La fonction AfficherListe parcourt la liste à partir de la tête, affichant chaque valeur jusqu'à la fin de la liste.
+Interaction avec l'utilisateur :
+       Dans la fonction principale (main), le programme demande à l'utilisateur combien d'éléments il souhaite ajouter à la liste, puis il lui demande de saisir ces éléments un par un. Chaque nouvel élément est inséré dans la liste en utilisant la fonction InsererTrie.
+Affichage final :
+     Une fois tous les éléments ajoutés, le programme affiche la liste triée.
+
