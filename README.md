@@ -60,7 +60,7 @@ Affichage final :
 
    Une fois tous les éléments ajoutés, le programme affiche la liste triée.
 
-4.INSERTION En Tête Et En Queue Dans UNE LISTE SIMPLEMENT CHAÎNÉE CIRCULAIRE  
+4.INSERTION En TÊTE ET EN QUEUE Dans UNE LISTE SIMPLEMENT CHAÎNÉE CIRCULAIRE  
 
 Description
 
