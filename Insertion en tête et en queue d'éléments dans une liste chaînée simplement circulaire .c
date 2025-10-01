@@ -13,7 +13,7 @@ struct Node* creerNoeud(int val) {
         exit(1);
     }
     nouveau->data = val;
-    nouveau->next = nouveau; 
+    nouveau->next = nouveau;
     return nouveau;
 }
 
