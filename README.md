@@ -42,16 +42,21 @@ Structures de données :
 
     Le programme définit deux structures : Cellule, qui représente un élément de la liste (avec des pointeurs vers la cellule suivante et précédente), et Liste, qui contient un pointeur vers la tête de la liste.
 Création de cellules :
-     La fonction CreationCellule alloue de la mémoire pour une nouvelle cellule et l'initialise avec une valeur donnée, en fixant ses pointeurs à NULL.
+
+   La fonction CreationCellule alloue de la mémoire pour une nouvelle cellule et l'initialise avec une valeur donnée, en fixant ses pointeurs à NULL.
 Insertion triée :
-      La fonction InsererTrie prend un nombre entier et l'insère dans la liste de manière à ce que la liste reste triée. Elle gère plusieurs cas :
+
+   La fonction InsererTrie prend un nombre entier et l'insère dans la liste de manière à ce que la liste reste triée. Elle gère plusieurs cas :
 Si la liste est vide, la nouvelle cellule devient la tête.
 Si la valeur à insérer est inférieure à celle de la tête, la nouvelle cellule devient la nouvelle tête.
 Dans les autres cas, elle parcourt la liste pour trouver la bonne position d'insertion entre deux cellules ou à la fin de la liste.
 Affichage de la liste :
-      La fonction AfficherListe parcourt la liste à partir de la tête, affichant chaque valeur jusqu'à la fin de la liste.
+
+   La fonction AfficherListe parcourt la liste à partir de la tête, affichant chaque valeur jusqu'à la fin de la liste.
 Interaction avec l'utilisateur :
-       Dans la fonction principale (main), le programme demande à l'utilisateur combien d'éléments il souhaite ajouter à la liste, puis il lui demande de saisir ces éléments un par un. Chaque nouvel élément est inséré dans la liste en utilisant la fonction InsererTrie.
+
+    Dans la fonction principale (main), le programme demande à l'utilisateur combien d'éléments il souhaite ajouter à la liste, puis il lui demande de saisir ces éléments un par un. Chaque nouvel élément est inséré dans la liste en utilisant la fonction InsererTrie.
 Affichage final :
-     Une fois tous les éléments ajoutés, le programme affiche la liste triée.
+
+   Une fois tous les éléments ajoutés, le programme affiche la liste triée.
 
