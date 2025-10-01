@@ -15,3 +15,20 @@ Affichage de la liste : Avant toute opération de suppression, le programme affi
 Suppression d'occurrences : L'utilisateur saisit une valeur à supprimer. Le programme parcourt la liste et supprime toutes les cellules contenant cette valeur, en ajustant les pointeurs pour maintenir l'intégrité de la liste.
 
 Affichage après suppression : Enfin, le programme affiche la liste mise à jour, montrant que toutes les occurrences de l'élément spécifié ont été supprimées.
+
+2. INSERTION D'UN ÉLÉMENT DANS UNE LISTE SIMPLEMENT CHAÎNEE TRIÉE DE TELLE SORTE QU'ELLE RESTE TRIÉE 
+DESCRIPTION : ce programme utilise des fonctions pour 
+- créer une nouvelle cellule
+- inserer un élément dans une liste triée pour différents cas
+- afficher la liste en avant
+- afficher la liste en arrière
+  BIBLIOTHÈQUES
+  <stdio.h>
+  <stdio.lib>
+  PRÉREQUIS
+ . un compilateur c
+ . un terminal pour exécuter le programme
+  COMPLEXITÉ
+  pour n éléments
+  - spatiale : o(n)
+  - temporelle :o(n²)
