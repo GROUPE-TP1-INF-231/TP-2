@@ -1,18 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Definition de la structure pour une cellule
 typedef struct Cellule {
     int valeur;
     struct Cellule* suiv;
 } Cellule;
 
-// Definition de la structure pour une liste
 typedef struct Liste {
     Cellule* tete;
 } Liste;
 
-// Fonction pour creer une nouvelle cellule
 Cellule* CreationCellule(int valeur) {
     Cellule* nouvelleCellule = (Cellule*)malloc(sizeof(Cellule));
     nouvelleCellule->valeur = valeur;
@@ -34,7 +31,6 @@ void InsererFin(Liste* liste, int valeur) {
     }
 }
 
-// Fonction pour afficher la liste
 void AfficherListe(Liste* liste) {
     Cellule* courant = liste->tete;
     while (courant != NULL) {
@@ -69,10 +65,9 @@ void SupprimerOccurrences(Liste* liste, int valeur) {
     }
 }
 
-// Fonction principale
 int main() {
     Liste liste;
-    liste.tete = NULL; // Initialisation de la tete a NULL
+    liste.tete = NULL; 
 
     int n, valeur;
     printf("Combien d'elements voulez-vous ajouter a la liste ? : ");
@@ -95,4 +90,5 @@ int main() {
     AfficherListe(&liste);
 
     return 0;
+
 }
