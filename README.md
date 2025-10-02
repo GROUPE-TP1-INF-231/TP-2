@@ -84,3 +84,32 @@ Liste circulaire apres insertions en tete : 1 -> 5 -> 10 -> 20 -> (retour a 1)
 
 Liste circulaire apres insertions en queue : 10 -> 20 -> (retour a 1)
 
+   5. INSERTION EN TÊTE ET EN QUEUE DANS UNE LISTE DOUBLEMENT CHAÎNÉE CIRCULAIRE
+
+Ce programme en langage C implémente une liste doublement chaînée circulaire.
+Chaque nœud contient :
+une valeur entière (data)
+un pointeur vers le nœud suivant (next)
+un pointeur vers le nœud précédent (prev)
+La liste est circulaire : le dernier élément pointe vers le premier, et inversement.
+Fonctionnalités
+Insertion en tête : ajoute un nouvel élément au début de la liste.
+Insertion en queue : ajoute un nouvel élément à la fin de la liste.
+Affichage avant : parcourt la liste dans le sens normal.
+Affichage arrière : parcourt la liste dans le sens inverse.
+Exécution
+Compiler le programme avec :
+gcc liste_circulaire.c -o liste
+Lancer l’exécutable :
+
+Bash
+./liste
+Exemple de sortie
+
+Liste après insertions en tête :
+Parcours avant : 1 -> 2 -> (retour à 1)
+Parcours arrière : 2 -> 1 -> (retour à 2)
+
+Liste après insertions en queue :
+Parcours avant : 1 -> 2 -> 10 -> 20 -> (retour à 1)
+Parcours arrière : 20 -> 10 -> 2 -> 1 -> (retour à 20)
