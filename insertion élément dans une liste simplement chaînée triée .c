@@ -1,13 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Structure pour une cellule de la liste simplement chaînée 
 typedef struct cellule {
     int data;
     struct cellule* suiv;
 } cellule;
 
-// Fonction pour créer une nouvelle cellule 
 cellule* createcellule(int valeur) {
     cellule* nouveau = (cellule*) malloc(sizeof(cellule));
     if (!nouveau) {
@@ -19,7 +17,7 @@ cellule* createcellule(int valeur) {
     return nouveau;
 }
 
-// Insérer un élément dans une liste triée 
+
 void insertionTrie(cellule**tete, int valeur) {
     cellule* nouveau = createcellule(valeur);
 
@@ -66,18 +64,18 @@ void afficherArriere(cellule* tete) {
     printf("%d -> ", tete->data);
 }
 
-// Programme principal
+
 int main() {
     cellule* tete = NULL;
 
-    // Insertion d'éléments 
+    
     insertionTrie(&tete, 30);
     insertionTrie(&tete, 10);
     insertionTrie(&tete, 50);
     insertionTrie(&tete, 20);
     insertionTrie(&tete, 40);
 
-    // Affichage 
+    
     afficherAvant(tete);
     printf("Liste (arrière) : ");
     afficherArriere(tete);
