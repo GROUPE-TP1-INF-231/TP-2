@@ -41,7 +41,6 @@ void display() {
     printf("\n");
 }
 
-// insertion en queue dans une liste doublement chainé circulaire 
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -61,35 +60,35 @@ cellule* insertQueue(cellule* tete, int v) {
     cellule* nv = (cellule*)malloc(sizeof(cellule));  
     if (nv == NULL) {
         printf("Allocation impossible\n");
-        return tete; // Retourne la liste inchangee en cas d'échec d'allocation
+        return tete; 
     }
 
-    nv->v = v; // Initialise la valeur du nouveau nœud
-    nv->suiv = nv; // Initialisation de la liaison circulaire
-    nv->prec = nv; // Initialisation de la liaison circulaire
+    nv->v = v; 
+    nv->suiv = nv; 
+    nv->prec = nv; 
 
     if (tete == NULL) {
-        return nv; // Si la liste est vide, le nouveau nœud devient la tete
+        return nv; 
     }
 
-    // Inserer le nouveau nœud a la fin
-    cellule* queue = tete->prec; // Obtient le dernier nœud
-    nv->suiv = tete; // Le nouveau nœud pointe vers la tete
-    nv->prec = queue; // Definit le pointeur precedent du nouveau nœud
 
-    queue->suiv = nv; // Met a jour le suivant du dernier nœud
-    tete->prec = nv; // Met a jour le précédent de la tete
+    cellule* queue = tete->prec; 
+    nv->suiv = tete; 
+    nv->prec = queue; 
 
-    return tete; // Retourne la tete de la liste
+    queue->suiv = nv; 
+    tete->prec = nv; 
+
+    return tete; 
 }
 
 void Afficher(cellule* tete) {
     cellule* courant = tete;
     if (courant != NULL) {
         do {
-            printf("%d ", courant->v); // Affiche la valeur du nœud
-            courant = courant->suiv; // Passe au nœud suivant
-        } while (courant != tete); // Continue jusqu'a revenir a la tete
+            printf("%d ", courant->v); 
+            courant = courant->suiv; 
+        } while (courant != tete); 
         printf("\n");
     }
 }
@@ -97,7 +96,7 @@ void Afficher(cellule* tete) {
 int main() {
     int i, n;
     int v;
-    cellule* tete = NULL; // Initialise la tete a NULL
+    cellule* tete = NULL; 
 for(int i=0;i<n;i++){
 Printf("Donner le nombre d'elément a inserer en tête :");
 Scanf("%d",&n);
@@ -110,8 +109,8 @@ Afficher (tete);
     for (i = 0; i < n; i++) {
         printf("Entrez la valeur %d : ", i + 1);
         scanf("%d", &v);
-        tete = insertQueue(tete, v); // Met a jour la tete avec la nouvelle liste
+        tete = insertQueue(tete, v); 
     }
-    Afficher(tete); // Affiche la liste
+    Afficher(tete); 
     return 0;
 }
