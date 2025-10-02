@@ -17,17 +17,17 @@ Cellule* CreationCellule(int valeur) {
     return nouvelleCellule;
 }
 
-// Fonction pour inserer une cellule a la fin de la liste
+
 void InsererFin(Liste* liste, int valeur) {
     Cellule* nouvelleCellule = CreationCellule(valeur);
     if (liste->tete == NULL) {
-        liste->tete = nouvelleCellule; // La liste etait vide
+        liste->tete = nouvelleCellule; 
     } else {
         Cellule* courant = liste->tete;
         while (courant->suiv != NULL) {
-            courant = courant->suiv; // Parcours jusqu'a la fin de la liste
+            courant = courant->suiv; 
         }
-        courant->suiv = nouvelleCellule; // Ajout a la fin
+        courant->suiv = nouvelleCellule; 
     }
 }
 
@@ -92,3 +92,4 @@ int main() {
     return 0;
 
 }
+
